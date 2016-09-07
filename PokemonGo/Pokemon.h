@@ -1,0 +1,35 @@
+/*
+Juarez, Freddy
+CS A200
+August 31, 2016
+
+Class Pokemon
+*/
+
+#ifndef POKEMON_H
+#define POKEMON_H
+
+#include <string>
+#include <iostream>
+using namespace std;
+
+class Pokemon
+{
+	friend ostream& operator<<(ostream& out, const Pokemon& p);
+public:
+	Pokemon();
+	Pokemon(string& newName, string& newType1, string& newType2);
+
+	string getName() const;
+	string getType1() const;
+	string getType2() const;
+
+	~Pokemon();
+
+private:
+	string name;
+	string type1;
+	string type2;
+};
+
+#endif // !POKEMON_H
