@@ -16,9 +16,10 @@ using namespace std;
 class Pokemon
 {
 	friend ostream& operator<<(ostream& out, const Pokemon& p);
+
 public:
 	Pokemon();
-	Pokemon(string& newName, string& newType1, string& newType2);
+	Pokemon(const string& newName, const string& newType1, const string& newType2);
 
 	string getName() const;
 	string getType1() const;

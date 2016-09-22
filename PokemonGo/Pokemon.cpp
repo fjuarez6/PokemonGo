@@ -1,7 +1,7 @@
 #include "Pokemon.h"
 ostream& operator<<(ostream& out, const Pokemon& p)
 {
-	if (p.getType2 != "NULL")
+	if (p.type2 != "NULL")
 	{
 		out << p.name << ": " << p.type1 << " " << p.type2 << endl;
 	}
@@ -16,7 +16,7 @@ ostream& operator<<(ostream& out, const Pokemon& p)
 Pokemon::Pokemon()
 {}
 
-Pokemon::Pokemon(string& newName, string& newType1, string& newType2)
+Pokemon::Pokemon(const string& newName, const string& newType1, const string& newType2)
 {
 	name = newName;
 	type1 = newType1;
